@@ -35,8 +35,9 @@ export function Dictionary() {
                         <img src={"Picture1.png"} alt="cover" className="img-fluid" />
                     </div>
                     <div className="col-6 searchField">
+                        <label>What are you looking for?</label>
                         <form onSubmit={FormSubmissionHandler}>
-                            <input type="search" autoFocus="on" placeholder="type to search?" className="form-control"
+                            <input type="search" autoFocus="on" placeholder="type to search" className="form-control"
                                 onChange={KeywordChangeHandler} />
                         </form>
                     </div>
