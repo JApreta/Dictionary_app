@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import "../Styles/Phonetic.css"
 export function Phonetic(props) {
     const [audioPlay, SetAudioPlay] = useState(props.phonetic.audio);
