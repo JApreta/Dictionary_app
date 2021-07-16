@@ -1,4 +1,5 @@
 import React from "react"
+import "../Styles/Synonyms.css"
 export function Synonyms(props) {
     if (props.synonyms) {
         return (
@@ -20,7 +21,7 @@ export function Synonyms(props) {
 
     }
     else {
-        return (<p>hello</p>)
+        return (null)
     }
 }
 

@@ -1,21 +1,37 @@
+import React, { useState, useEffect } from "react"
+import "../Styles/Phonetic.css"
 export function Phonetic(props) {
+    const [audioPlay, SetAudioPlay] = useState(props.phonetic.audio);
 
-    function playAudio() {
+    function PlayAudio(e) {
+
+        e.preventDefault();
+
         const audio = document.getElementById("audio")
-        audio.play()
+        const source = document.getElementById("sourc")
+        SetAudioPlay(props.phonetic.audio)
+        source.src = audioPlay;
+        audio.load();
+        audio.play();
+
+
     }
+
     return (
         <>
-            {props.phonetic.text}
 
 
-            <button onClick={playAudio}>
-                <span>Listen</span>
+
+            <button onClick={PlayAudio}>
+                <span><i class="fas fa-volume-up"></i></span>
             </button>
 
+            {props.phonetic.text}
+
             <audio id="audio">
-                <source src={props.phonetic.audio}></source>
+                <source id="sourc" src={audioPlay} />
             </audio>
+
         </>
     )
 }

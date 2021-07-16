@@ -28,15 +28,23 @@ export function Dictionary() {
     }
     return (
         <>
-            <div className="Dictionary">
-                <form onSubmit={FormSubmissionHandler}>
-                    <input type="search" autoFocus="on" placeholder="what are you searchinf for?" className="form-control"
-                        onChange={KeywordChangeHandler} />
-                </form>
+            <div className="container">
+                <div className="row Dictionary">
+
+                    <div className="col-4">
+                        <img src={"Picture1.png"} alt="cover" className="img-fluid" />
+                    </div>
+                    <div className="col-6 searchField">
+                        <form onSubmit={FormSubmissionHandler}>
+                            <input type="search" autoFocus="on" placeholder="type to search?" className="form-control"
+                                onChange={KeywordChangeHandler} />
+                        </form>
+                    </div>
+                </div>
+                <div className="row">
+                    <Results results={results} />
+                </div>
             </div>
-
-            <Results results={results} />
-
         </>
     )
 }

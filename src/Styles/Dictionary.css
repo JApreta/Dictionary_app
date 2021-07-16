@@ -1,3 +1,30 @@
 .Dictionary {
-    background-color: aquamarine;
+    margin: 0 auto;
+    background-color: black;
+    border-radius: 25px;
+}
+
+#mainSec {
+    background-color: rgb(253, 253, 252);
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    text-transform: capitalize;
+}
+
+.searchField {
+    margin-top: 7%;
+}
+
+input[type="search"] {
+    background-color: rgb(201, 226, 243);
+}
+
+section {
+    border-radius: 4px 4px;
+    background-color: rgb(201, 226, 243);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0px 5px 15px rgb(247, 245, 245);
+    margin: 20px 0;
 }
